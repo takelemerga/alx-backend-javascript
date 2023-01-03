@@ -9,5 +9,3 @@ export default function cleanSet(_set, startString) {
   });
   return stringSet.join('-');
 }
-Footer
-
