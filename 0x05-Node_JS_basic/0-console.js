@@ -1,5 +1,10 @@
+/**
+ *display argument in STDOUT
+*/
+
 function displayMessage(arg)
 {
-console.log(argument);
+console.log(arg);
 }
+
 module.exports = displayMessage;
