@@ -35,7 +35,7 @@ const countStudents = (path) => {
     console.log(`Number of students in CS: ${numbcs}. List: ${cs}`);
     console.log(`Number of students in SWE: ${numbse}. List: ${se}`);
   } catch (err) {
-    console(err);
+    console.log('Cannot load the database');
   }
 };
 
