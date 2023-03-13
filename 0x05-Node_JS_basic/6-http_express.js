@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
+
 app.listen(PORT, (err) => {
   if (!err) console.log(`express server is running on port: ${PORT}`);
   else { console.log('error happened!'); }
