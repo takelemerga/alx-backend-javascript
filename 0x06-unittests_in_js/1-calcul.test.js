@@ -1,5 +1,5 @@
 const assert = require('assert');
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./1-calcul.js');
 
 describe('testing Suite', () => {
   it('round the first argument and type is SUM', () => {
