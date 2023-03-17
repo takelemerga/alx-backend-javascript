@@ -14,4 +14,4 @@ app.listen(PORT, (err) => {
   if (!err) console.log(`express server is running on port: ${PORT}`);
   else { console.log('error happened!'); }
 });
-module.export = app;
+module.exports = app;
