@@ -1,3 +1,9 @@
-const calculateNumber = (a, b) => Math.round(a) + Math.round(b);
+// Calculation function.
+
+function calculateNumber(a, b) {
+    firstInt = Math.round(a);
+    secondInt = Math.round(b);
+    return firstInt + secondInt;
+}
 
 module.exports = calculateNumber;
