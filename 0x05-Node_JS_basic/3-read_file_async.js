@@ -29,15 +29,19 @@ const countStudents = (path) => {
           sestudents = `${sestudents + as[0]}, `;
         }
       });
-
+   
+      const response = []; 
       const cs = csstudents.trim().slice(0, -1);
       const se = sestudents.trim().slice(0, -1);
       const numbcs = cs.split(',').length;
       const numbse = se.split(',').length;
       console.log(`Number of students: ${lines}`);
+      response.push(`Number of students: ${lines}`);
       console.log(`Number of students in CS: ${numbcs}. List: ${cs}`);
+      response.push(`Number of students in CS: ${numbcs}. List: ${cs}`);
       console.log(`Number of students in SWE: ${numbse}. List: ${se}`);
-      resolve(true);
+      response.push(`Number of students in SWE: ${numbse}. List: ${se}`);
+      resolve(response);
       reject(new Error('something bad happened'));
     } catch (err) {
       console.log('Error: Cannot load the database');
