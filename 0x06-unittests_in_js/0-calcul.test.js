@@ -1,35 +1,25 @@
 const assert = require('assert');
-const calculateNumber = require('./0-calcul');
+const calculateNumber = require('./0-calcul.js');
 
-describe("Tests calculateNumber function:", function() {
-    describe("Calculates two integers:", function() {
-        it('Returns 4.', function() {
-            assert.strictEqual(calculateNumber(1, 3), 4);
-        });
-    });
-    describe("Calculates one float & one integer:", function() {
-        it('Returns 5.', function() {
-            assert.strictEqual(calculateNumber(1, 3.7), 5);
-        });
-    });
-    describe("Calculates one float & one integer (round down):", function() {
-        it('Returns 4.', function() {
-            assert.strictEqual(calculateNumber(1, 3.3), 4);
-        });
-    });
-    describe("Calculates one float & one int reversed:", function () {
-    it('Returns 5.', function () {
-      assert.strictEqual(calculateNumber(3.7, 1), 5);
-    });
+describe('testing Suite', function() {
+  it('round the first argument', function() {
+    assert.equal(calculateNumber(2.0, 1), 3);
+    assert.equal(calculateNumber(1.3, 2), 3);
+    assert.equal(calculateNumber(2.5, 3), 6);
   });
-    describe("Calculates two floats:", function() {
-        it('Returns 5.', function() {
-            assert.strictEqual(calculateNumber(1.2, 3.7), 5);
-        });
-    });
-    describe("Calculates two floats w/borderline:", function() {
-        it('Returns 6.', function() {
-            assert.strictEqual(calculateNumber(1.5, 3.7), 6);
-        });
-    });
+
+  it('round the second argument', function()  {
+    assert.equal(calculateNumber(1, 2.0), 3);
+    assert.equal(calculateNumber(2, 1.3), 3);
+    assert.equal(calculateNumber(3, 2.5), 6);
+  });
+
+  it('return correct number', function() {
+    assert.equal(calculateNumber(2.0, 1.5), 4);
+    assert.equal(calculateNumber(1.3, 2.9), 4);
+    assert.equal(calculateNumber(2.49999, 6.1), 8);
+    assert.equal(calculateNumber(3.7, 2), 6);
+    assert.equal(calculateNumber(1.3, 0), 1);
+    assert.equal(calculateNumber(2, 3), 5);
+  });
 });
